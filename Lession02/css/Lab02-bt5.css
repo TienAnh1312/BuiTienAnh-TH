@@ -1,0 +1,19 @@
+* {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #menu ul {
+
+    list-style-type: none;
+  }
+  #menu a {
+    text-decoration: none;
+    color: yellow;
+  }
+  #menu li {
+    background-color: darkgrey;
+    margin: 5px 0;
+    height: 3rem;
+    width: 10%;
+  }
