@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Sign-Up</title>
+    <link rel="stylesheet" href="/Lession02/css/Lab02-bt10.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>facebook</h1>
+            <h2>Đăng ký</h2>
+            <p>Luôn miễn phí.</p>
+            <form action="#" method="POST">
+                <div class="name-box">
+                    <input type="text" placeholder="Họ" required>
+                    <input type="text" placeholder="Tên" required>
+                </div>
+                <input type="email" id="text" placeholder="Số di động hoặc email" required>
+                <input type="password" id="text" placeholder="Mật khẩu mới" required>
+
+                <div class="birthday">
+                    <label>Ngày sinh</label>
+                <div class="birthday-box">
+                    <select name="day" required>
+                        <option>Ngày</option>
+                        <!-- Add options for days -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <!-- Add more days -->
+                    </select>
+                    <select name="month" required>
+                        <option>Tháng</option>
+                        <!-- Add options for months -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <!-- Add more months -->
+                    </select>
+                    <select name="year" required>
+                        <option>Năm</option>
+                        <!-- Add options for years -->
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <!-- Add more years -->
+                    </select>
+                </div>
+                </div>
+
+                <div class="gender-box">
+                    <input type="radio" name="gender" value="female" required> Nữ
+                    <input type="radio" name="gender" value="male" required> Nam
+                </div>
+
+                <div class="terms">
+                    <p>Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với 
+                        <a href="#">Điều khoản</a> và 
+                        <a href="#">Chính sách dữ liệu</a> của chúng tôi.
+                    </p>
+                </div>
+
+                <div class="button">
+                    <input type="submit" id="submit" value="Tạo tài khoản">
+                </div>
+            </form>
+            <p><a href="#">Tạo Trang</a> dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.</p>
+        </div>
+    </div>
+</body>
+</html>
