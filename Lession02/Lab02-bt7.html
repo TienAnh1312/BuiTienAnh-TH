@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/Lession02/css/Lab02-bt7.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>WuFoo</h2>
+        </div>
+        <div class="new">
+            <h3>To Do List</h3>
+            <hr>
+        </div>
+        <form action="#" method="post">
+            <label for="item">Item</label>
+            <input type="text" id="item" name="item">
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="due-date">Due Date</label>
+            <input type="text" id="date" name="date" placeholder="MM/DD/YYYY">
+
+            <label for="status">Status</label>
+            <input type="checkbox" id="status" name="status">
+            <label for="status">Done</label>
+
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
