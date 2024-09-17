@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #menu ul {
+
+    list-style-type: none;
+  }
+  #menu a {
+    text-decoration: none;
+    color: yellow;
+  }
+  #menu li {
+    background-color: darkgrey;
+    margin: 5px 0;
+    height: 2rem;
+    width: 10%;
+  }
+  #menu li:hover {
+    background-color: rgb(231, 37, 205);
+  }

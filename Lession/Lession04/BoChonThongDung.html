@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ chọn thông dụng với css</title>
+    <style>
+        /* Bộ chọn phần tử: body, h1, section,...*/
+        body {
+            background-color: aqua;
+        }
+    
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5rem;
+        }
+    
+        /* - Bộ chọn thuộc tính id: #zone1, #catalog,...*/
+        #zone1 {
+            border: 5cqi solid blue;
+            background-color: #fff;
+            padding: 1rem;
+        }
+        
+        /* - Bộ chọn thuộc tính class: .classname, .container,...*/
+        .container{
+            background-color: greeen;
+            margin: 1rem 2rem;
+            padding: 1rem;
+        }
+        .item{
+            color: yellow;
+        }
+        .btn{
+            border: 3px solid red;
+            border-radius: 3px;
+            padding: .5rem 1rem;
+            color: #fff;
+        }
+        .btn-red{    
+            background-color: red;
+        }
+        .btn-green{
+            background-color: green;
+        }
+
+         /* Bộ chọn giá trị thuộc tính: input[type='text'] {...}*/
+         input[type='button']{
+            font-family: fantasy;
+            font-size: 1.5rem;
+         }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Các bộ thông dụng với Css</h1>
+        <hr>
+        <pre>
+            - Bộ chọn phần tử: body, h1, section,...
+            - Bộ chọn thuộc tính id: #zone1, #catalog,...
+            - Bộ chọn class: .classname, .container,...
+            - Bộ chọn giá trị thuộc tính: input[type='text'] {...}
+        </pre>
+    </section>
+    <section id="zone1">
+        <h2>bộ chọn thuộc tính id: zone1,...</h2>
+    </section>
+    <section id="zone2" class="container">
+        <h2>Bộ chọn class: .classname, .container,...</h2>
+        <p class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perferendis dicta, ex hic aperiam iste
+            magnam repellat eum consectetur voluptatibus quia quibusdam nemo alias dolores. Quidem veniam aspernatur
+            dicta consequatur!
+        </p>
+        <input type="button" value="Button 1" class="btn btn-red">
+        <input type="button" value="Button 2" class="btn btn-green">
+        <input type="submit" value="login">
+    </section>
+</body>
+</html>

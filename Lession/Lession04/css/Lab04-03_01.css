@@ -1,0 +1,110 @@
+.clearfix{
+    overflow: hidden;
+    clear: both;
+}
+header{
+    background: #2d303a;
+}
+.fixwidth{
+    width: 940px;
+    margin: 0 auto;
+}
+.topnav{
+    width: 940px;
+    margin: 0 auto;
+    padding: 34px 0;
+}
+#logo{
+    width: 200px;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+#logo a{
+    color: #fff;
+    font-size: 25px;
+}
+#logo a span{
+    color: #f06c64;
+}
+.topnav nav{
+    float: right;
+    width: 431px;
+}
+.topnav nav ul li{
+    float: left;
+}
+.topnav nav ul li a{
+    color: #fff;
+    display: block;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 12px;
+}
+.selected, 
+.topnav nav ul li a:hover{
+    color: #f06c64;
+}
+#banner{
+    background: #f06c64;
+    padding: 50px 0;
+}
+
+#ourServices {
+    padding: 66px 0;
+    background: #f2f2f2;
+}
+
+#portfolio h2,
+#aboutUs h3,
+#getaQuote h3 {
+    font-size: 30px;
+    color: #666d89;
+}
+
+#portfolio p,
+#aboutUs p,
+#getaQuote p,
+#ourServices p {
+    color: #767e9e;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 0;
+}
+
+.itemService {
+    width: 220px;
+    float: left;
+    margin-right: 20px;
+    padding-left: 80px;
+}
+
+#portfolio {
+    background: #2d303a;
+    padding: 65px 0;
+}
+
+.portfolio {
+    margin-bottom: 18px;
+}
+
+.portfolio ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.portfolio ul li a {
+    display: block;
+    color: #767e9e;
+    font-size: 12px;
+    padding: 5px;
+    border: solid 1px #767e9e;
+    border-radius: 5px;
+}
+
+.selectedx,
+.portfolio ul li a:hover {
+    border: solid 1px #c5c5c5 !important;
+    color: #c5c5c5 !important;
+}
