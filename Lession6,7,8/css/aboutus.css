@@ -1,0 +1,65 @@
+.box-content{
+    background: #f3f3f3;
+    margin-top: 5rem;
+}
+.banner-page_image img{
+    height: 25rem;
+    width: 100%;
+}
+.banner-page_title{
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-page{
+    position: relative;
+}
+.banner-page_title img{
+    width: 6rem;
+    display: block;
+    margin: 0 auto;
+}
+.banner-page_title p{
+    font-size: 2rem;
+    color: #fff;
+    font-family: Gotham-Ultra;
+}
+.box-about{
+    align-items: center;
+}
+.wrapper-box{
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    top: -3rem;
+    padding: 3rem;
+}
+.wrapper-box .about-vision p{
+    margin-top: 1.5rem;
+}
+.wrapper-box p{
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+.about-policy .col-md-6{
+    margin-bottom: 1.5rem;
+}
+.about-policy .thumbnail{
+    border: 0.2rem solid #bd945f;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    height: 7rem;
+}
+.about-policy .image{
+    max-width: 5rem;
+}
+.about-policy .content{
+    margin-left: 1rem;
+    text-align: left;
+}
+.about-policy .title{
+    color: #bd945f;
+}
