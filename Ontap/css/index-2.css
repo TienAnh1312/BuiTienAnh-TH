@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-size: 16px;
+}
+h1{
+    font-size: 30px;
+    color: blue;
+}
+h3{
+    color: blue;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 0px;
+}
+p{
+    color: cadetblue;
+}
+section{
+    background-color: #f2f2f2;
+    padding: 66px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    html,body{
+        font-size: 16px;
+    }
+    .col{
+        width: 100%;
+    }
+}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    html,body{
+        font-size: 18px;
+    }
+    .col{
+        width: 75%;
+    }
+}
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    html,body{
+        font-size: 20px;
+    }
+    .col{
+        width: 50%;
+    }
+}
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    html,body{
+        font-size: 22px;
+    }
+    .col{
+        width: 25%;
+    }
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    html,body{
+        font-size: 24px;
+    }
+    .col{
+        width: 25%;
+    }
+}
+
+/*  XXX-Large devices (larger x  desktops, 1600px and up) */
+@media (min-width: 1600px) { 
+    html,body{
+        font-size: 28px;
+    }
+    .col{
+        width: 25%;
+    }
+}
+
+/*  XXX-Large devices (larger desktops, 1920px and up) */
+@media (min-width: 1920px) { 
+    html,body{
+        font-size: 32px;
+    }
+    .col{
+        width: 26%;
+    }
+}
