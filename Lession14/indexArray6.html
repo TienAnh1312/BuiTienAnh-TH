@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript Array </h1>
+    <h2>Phương thức Push()</h2>
+    <button onclick="myFunction()">Add</button>
+    <p id="demo"></p>
+
+    <script>
+        const hoaqua = ["Táo", "Cam", "Quýt", "Bưởi"];
+        document.getElementById("demo").innerHTML = hoaqua;
+        function myFunction(){
+            hoaqua.push("Chuối");
+            document.getElementById("demo").innerHTML = hoaqua;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript array </h1>
+    <h2>mảng và đối tượng lồng nhau</h2>
+    <p id="demo"></p>
+
+    <script>
+        let x = "";
+        const myObject = {
+            name: "Anh",
+            age: 21,
+            hobbies: [
+                {sport: "Ngủ", model:["Ngủ say", "Cực say", "Cực cực say"]},
+                {sport: "Cầu lông", model:["Mạnh", "Hay", "Nhanh"]},
+                {sport: "Bóng đá", model:["Phòng ngự", "Chạy nhanh", "Đọc vị trí"]}
+            ]
+        }
+        for(let i in myObject.hobbies){
+            x += "<h2>" + myObject.hobbies[i].sport + "</h2>"
+            for(let j in myObject.hobbies[i].model){
+                x += myObject.hobbies[i].model[j] + "<br>";
+            }
+        }
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

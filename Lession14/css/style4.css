@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    margin: 8px;
+}
+ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #ccc;
+    padding: 10px;
+}
+p{
+    display: block;
+    border: 1px solid #ccc;
+    height: 300px;
+}
+ul li:hover{
+    background-color: aqua;
+}

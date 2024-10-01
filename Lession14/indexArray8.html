@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>method find()</h1>
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [4,6,34,12,23];
+        let first = numbers.find(myFunction);
+        document.getElementById("demo").innerHTML = "Số lớn hơn 18 là " + first;
+        function myFunction(value){
+            return value > 18;
+        }
+    </script>
+</body>
+</html>
