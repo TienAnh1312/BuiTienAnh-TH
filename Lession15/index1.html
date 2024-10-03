@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng bootstrap</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal"
+                     aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 Hãy đăng nhập tài khoản
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary"
+                     data-bs-dismiss="modal">Đóng</button>
+                 <button type="button" class="btn btn-primary">Đăng nhập</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Khóa học
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                <li><a class="dropdown-item" href="#">Css</a></li>
+                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                <li><a class="dropdown-item" href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Nhập thông tin tìm kiếm"
+                            aria-label="Search">
+                        <!-- <button class="btn btn-outline-success" type="submit">Tìm kiếm</button> -->
+                    </form>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-user"></i> Tài Khoản
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+                            <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                            <li><button type="button" class="btn btn-primary position-relative" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Giỏ hàng
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        99+
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+                               
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="m-auto" style="width: 80%;">
+        <div class="Banner m-auto">
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/banner.png" class="d-block w-100" alt="..." height="300px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner.png" class="d-block w-100" alt="..." height="300px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner.png" class="d-block w-100" alt="..." height="300px">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Trước</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sau</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="home-aboutus">
+            <p class="d-grid gap-1 m-auto mt-3 mb-3 col-4">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Giới thiệu
+                </a>
+            </p>
+            <div class="collapse m-auto" id="collapseExample" style="width: 80%;">
+                <div class="card card-body">
+                    Nội thất của Hoàng Hoan chúng tôi tự hào là đức con tinh thần ra đời sau hơn 30 năm hoạt động trong
+                    lĩnh vực kinh doanh đồ gỗ nội thất với thương hiệu ĐỒ GỖ HOÀNG HOAN nổi tiếng.
+                    <br>
+                    Tài nguyên của chúng tôi là đội ngũ kiến ​​trúc sư tốt nghiệp ĐH Kiên Trúc Hà Nội với nhiều năm kinh
+                    nghiệm, luôn tràn nhiệt huyết và sức sáng tạo của tuổi trẻ. Thế mạnh của chúng tôi là chủ sở hữu
+                    xưởng nội thất hơn 10.000m2 tại Hà Nội sản xuất đa dạng các loại sản phẩm với giá cả luôn cạnh
+                    tranh.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-news">
+            <div class="row m-auto">
+                <div class="card col-md-3">
+                    <img src="./images/004.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bàn ăn</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Xem Thêm</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-3">
+                    <img src="./images/004.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bàn ăn </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Xem Thêm</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-3">
+                    <img src="./images/004.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bàn ăn</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Xem Thêm</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-3">
+                    <img src="./images/004.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bàn ăn</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Xem Thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-accordion">
+            <div class="accordion row" id="accordionExample">
+                <div class="accordion-item col-md-6">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <img src="./images/chinh-sach.jpg" alt="">
+                            <h2>CHÍNH SÁCH GIÁ</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Tốt nhất và công khai giá trên Website</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-md-6">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <img src="./images/san-pham.jpg" alt="">
+                            <h2>SẢN XUẤT</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Sản phẩm tiếp theo được sản xuất bởi hàng ngũ nhân viên đầu</strong> .
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-md-6">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <img src="./images/chat-luong.jpg" alt="">
+                            <h2> CHẤT LƯỢNG</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Cam kết chất lượng sản phẩm và tiến trình thi công</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-md-6">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <img src="./images/bao-hanh.jpg" alt="">
+                            <h2>BẢO HÀNH</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Dịch vụ bảo hành sản phẩm tốt nhất khu vực</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

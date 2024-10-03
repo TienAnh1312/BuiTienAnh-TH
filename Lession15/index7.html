@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Method Obj</h1>
+    <p>hiển thị 1 biến</p>
+    <p id="demo"></p>
+
+    <p>Đối tượng có nhiều giá trị</p>
+    <p id="demo1"></p>
+
+    <p>Tạo 1 dối tượng rỗng sa uddos thêm 4 thuộc tính</p>
+    <p id="demo2"></p>
+
+    <p>Phương thức có hàm xác định lưu trữ trong giá trị</p>
+    <p id="demo3"></p>
+
+
+    <script>
+        let car = "Bp";
+        document.getElementById("demo").innerHTML = "Săn xe " + car;
+        //1
+        const car1 = { type: "Star", model: "S-Pink", color: "Hồng" }
+        document.getElementById("demo1").innerHTML = "Săn xe " + car1.type + " Skin " + car1.model + " Màu " + car1.color;
+        //2
+        const person = {};
+        person.name = "Anh";
+        person.firstName = "Tiến";
+        person.lastName = "Bùi";
+        person.age = "21";
+        person.address = "Tuyên Quang";
+        person.gender = "Nam"
+
+        //delete
+        delete person.age;
+
+        document.getElementById("demo2").innerHTML = " Tôi tên là " + person.name + " Tuổi của tôi " + person.age + " Địa chỉ " + person.address + " Giới tính " + person.gender
+
+        const persons = {
+            firstName: "Tiến",
+            lastName: "Bùi",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const x = person;
+        x.birth = 2003;
+        document.getElementById("demo3").innerHTML = " Tôi tên là " + persons.fullName() + " Tôi sinh năm " + x.birth;
+
+        
+
+    </script>
+</body>
+
+</html>
