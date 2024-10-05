@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <!-- Thêm Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <button class="btn btn-primary mb-3" id="addStudentButton" onclick="functionThemSV()">Thêm mới sinh
+                    viên</button>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Nhập tên muốn tìm" id="searchInput">
+                    <button class="btn btn-primary" id="searchButton">Tìm kiếm</button>
+                    <button class="btn btn-secondary" id="sortButton">Sắp xếp</button>
+                </div>
+
+                <table class="table table-bordered table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Mã sinh viên</th>
+                            <th>Tên sinh viên</th>
+                            <th>Tuổi</th>
+                            <th>Giới tính</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                        <!-- Dữ liệu sinh viên sẽ được chèn vào đây -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form thông tin sinh viên -->
+            <div id="from2" class="col-md-4" style="display: none;">
+                
+                <h3>Thông Tin Sinh Viên</h3>
+                <form id="studentForm">
+                    <div class="mb-3">
+                        <label for="studentId" class="form-label">Mã sinh viên</label>
+                        <input type="text" class="form-control" id="studentId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Tên sinh viên</label>
+                        <input type="text" class="form-control" id="studentName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Tuổi</label>
+                        <input type="number" class="form-control" id="age">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sex" class="form-label">Giới tính</label>
+                        <select class="form-select" id="sex">
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthDate" class="form-label">Ngày sinh</label>
+                        <input type="date" class="form-control" id="birthDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthPlace" class="form-label">Nơi sinh</label>
+                        <input type="text" class="form-control" id="birthPlace">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Địa chỉ</label>
+                        <input type="text" class="form-control" id="address">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="saveButton">Thêm Mới</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thêm jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Thêm Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Lab07.js"></script>
+</body>
+
+</html>
