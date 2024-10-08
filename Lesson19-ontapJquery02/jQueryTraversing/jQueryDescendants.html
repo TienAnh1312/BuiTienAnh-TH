@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .descendants{
+            display: block;
+            border: 2px solid #ccc;
+            color: #ccc;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="descendants">
+        div(thành phần div)
+        <p id="first">
+            p(Phần tử con)
+            <span>
+                span(phần tử cháu)
+            </span>
+        </p>
+        <p id="seconds">
+            p(Phần tử con)
+            <span>
+                span(phần tử cháu)
+            </span>
+        </p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ 
+    <script>
+        $(document).ready(function(){
+            $("div").children("p.first").css({"color":"red", "border":"2px solid red"});
+            $("div").find("span").css({"color":"red", "border":"2px solid red"});
+        })
+    </script>
+</body>
+</html>
