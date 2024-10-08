@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07 - bài thực hành 2</title>
+
+</head>
+
+<body>
+    <section id="zone1">
+        <h1>Chọn màu chữ</h1>
+        <div class="button">
+            <button value="red">Đỏ</button>
+            <button value="blue">Xanh</button>
+            <button value="yellow">Vàng</button>
+            <button value="gray">Ghi</button>
+            <button value="violet">Tím</button>
+        </div>
+
+        <div class="noi-dung">
+            <p>Lập trình web với PHP và MySQL</p>
+        </div>
+
+        <button id="reset">Reset</button>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //Tô màu cho các button tương ứng (màu nền)
+            $('.button > button').each(function(){
+                //lấy màu từ thuộc tính value của button
+                let valColor = $(this).attr("value")
+                //tô màu (valColor) cjo button
+                $(this).css("background", valColor)
+                        .css({
+                            'border' : '1px solid' + valColor,
+                            'padding' : '.15rem 1rem'
+                        });
+            })
+            //tô màu chữ nội dung
+            $('.button button').click(function(){
+                // lấy màu từ nút
+                let color = $(this).attr('value')
+                // set color cho nội dung
+                $('.noi-dung p').css({
+                    'color':color
+                })
+            });
+
+            // reset
+            $("#reset").click(function(){
+                $('.noi-dung p').css({
+                    'color' : '#000',
+                })          
+            });
+
+            // hoặc
+            $('#zone1 > button').click(function(){
+                $('.noi-dung p').css({
+                    'color' : '#000',
+                })    
+            })
+        });
+    </script>
+</body>
+
+</html>
