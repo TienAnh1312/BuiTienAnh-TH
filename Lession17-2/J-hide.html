@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Thẻ h2</h2>
+    <p>Thẻ p</p>
+    <p class="intro">P có class</p>
+    <p>fff</p>
+
+    <p>List1</p>
+    <ul>
+        <li>Xoài</li>
+        <li>Cam</li>
+        <li>Chuối</li>
+    </ul>
+
+    <p>List2</p>
+    <ul>
+        <li>Chó</li>
+        <li>Mèo</li>
+        <li>Khỉ</li>
+    </ul>
+
+    <p><a href="https://facebook.com">Tiến Anh</a></p>
+
+    <input type="text" placeholder="Xóa input">
+    <input type="number" placeholder="không xóa đc">
+
+    <button class="btn1">Click1</button>
+    <button class="btn2">Click2</button>
+    <button class="btn3">Click3</button>
+    <button class="btn4">Click4</button>
+    <button class="btn5">Click5</button>
+    <button class="btn6">Click6</button>
+    <button class="btn7">Click7</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){ //ẩn tất cả
+                $("*").hide()
+            })
+
+            $(".btn2 ").click(function(){ //ẩn đi chính mình
+                $(this).hide()
+            })
+
+            $(".btn3").click(function(){ //click chỉ ẩn thẻ p có class = "intro"
+                $("p.intro").hide();
+            })
+
+            $(".btn4").click(function(){ //xóa thẻ p đầu tiên
+                $("p:first").hide(); 
+            })
+
+            $(".btn5").click(function(){ //ẩn thẻ li đầu tiên 
+                $("ul li:first-child").hide();
+            })
+
+            $(".btn6").click(function(){ //ẩn link href
+                $("[href]").hide();
+            })
+
+            $(".btn7").click(function(){ //xóa ô input có type = text
+                $("input[type='text']").hide();
+            })
+        })
+    </script>
+</body>
+</html>

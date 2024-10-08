@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">Chữ <b>Đậm</b></p>
+    <p><a href="https://facebook.com" id="fb">FaceBook</a></p>
+    <button id="btn1">Show text</button>
+    <button id="btn2">Show Html</button>
+    <button id="btn3">hiển thị giá trị href</button>
+    <input type="text" id="text" value="abcccc">
+    <button id="btn4">Hiển thị giá trị trong input</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("Hiển thị " + $("#test").text());
+            })
+
+            $("#btn2").click(function(){ //.html hiển thị tất cả phần tử trong thẻ p: id test
+                alert("Hiển thị " + $("#test").html());
+            })
+
+            $("#btn3").click(function(){ 
+                alert("Hiển thị " + $("#fb").attr("href"));
+            })
+
+            $("#btn4").click(function(){ 
+                alert("Hiển thị " + $("#text").val());
+            })
+        })
+    </script>
+</body>
+</html>

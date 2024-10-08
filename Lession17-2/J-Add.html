@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Dòng 1</p>
+    <p>Dòng 2</p>
+    <ul>
+        <li>Sản phẩm 1</li>
+        <li>Sản phẩm 2</li>
+        <li>Sản phẩm 3</li>
+    </ul>
+
+    <button id="btn1">Thêm</button>
+    <button id="btn2">Thêm</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").after("<b>Thêm nữa đi</b>")
+            })
+
+            $("#btn2").click(function(){
+                $("ul").append("<li>Thêm li nữa đi</li>")
+            })
+
+            $("#btn3").click(function(){
+                $("ul").prepend("<li>Thêm li nữa đi</li>")
+            })
+        })
+    </script>
+
+    
+</body>
+</html>

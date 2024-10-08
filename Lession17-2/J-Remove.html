@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="height: 100px; width: 300px;">
+        Đoạn văn
+        <p>Đoạn văn 1</p>
+        <p>Đoạn văn 2</p>
+    </div>
+    <button>Xóa thành phần trong div</button>
+    <button id="show">Show</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").remove();
+            })
+        })
+    </script>
+
+    
+</body>
+</html>

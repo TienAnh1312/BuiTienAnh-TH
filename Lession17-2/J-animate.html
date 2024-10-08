@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">Dịch chuyển sang phải</button>
+    <button class="btn2">Dịch chuyển sang trái</button>
+    <button class="btn3">Dịch chuyển xuống dưới</button>
+    <button class="btn4">Dịch chuyển lên trên</button>
+
+    <div style="background-color: red; height: 100px; width: 100px; position: absolute;">Div</div>
+    <button>Test</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("div").animate({left: '250px',opacity:"0.5",hight:"200px", width:"200px"});
+            })
+
+            $(".btn2").click(function(){
+                $("div").animate({right: '-250px'});
+            })
+
+            $(".btn3").click(function(){
+                $("div").animate({bottom: '250px'});
+            })
+
+            $(".btn4").click(function(){
+                $("div").animate({top: '-250px'});
+            })
+
+            $("button").click(function(){
+                var div = $("div");
+                div.animate({height:"300px", opacity: "0.4", fontSize: "3rem"}, "slow")
+                div.animate({width:"300px", opacity: "0.8" , fontSize: "14px"}, "slow")
+                div.animate({height:"100px", opacity: "0.4", fontSize: "3rem"}, "slow")
+                div.animate({width:"100px", opacity: "0.8", fontSize: "14px"}, "slow")
+            })
+        })
+    </script>
+</body>
+</html>

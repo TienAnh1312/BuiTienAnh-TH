@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #panel, #flip{
+        padding: 5px;
+        text-align: center;
+        font-size: 2rem;
+        background-color: red;
+        color: white;
+        border: 2px seagreen solid;
+        border-radius: 5px;
+    }
+    #panel{
+        display: none;
+        padding: 50px;
+    }
+</style>
+<body>
+    <button id="stop">Dừng</button>
+    <div id="flip">Bấm vào đây để thao tác</div>
+    <div id="panel">
+        <p>Mở</p>
+        <p>Ra</p>
+        <p>Rồi</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(5000).slideUp(5000);
+            })
+
+            $("#stop").click(function(){
+                $("#panel").stop();
+            })
+        })
+    </script>
+</body>
+</html>

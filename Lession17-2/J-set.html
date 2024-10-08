@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test1">Dòng 1</p>
+    <p id="test2">Dòng 2</p>
+    <p>Nhập: <input type="text" id="test3" value="beee"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test1").text("Hello");
+            })
+
+            $("#btn2").click(function(){
+                $("#test2").html("<b>Hello</b>");
+            })
+
+            $("#btn3").click(function(){
+                $("#test3").val("Hello");
+            })
+        })
+    </script>
+</body>
+</html>
