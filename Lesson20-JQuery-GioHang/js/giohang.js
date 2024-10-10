@@ -1,5 +1,62 @@
-// Các chức năng Giỏ hàng
 $(document).ready(function() {
+
+    if (!localStorage.getItem('products')) {
+        const initialProducts = [
+            { productId: "P0001", productName: "Bàn ăn", productImage: ["004.jpg"], dataPrice: "30000000" ,productPrice:"30000000"},
+            { productId: "P0002", productName: "Bàn uống Trà", productImage: ["009.jpg"], dataPrice: "3000000", productPrice:"3000000"}
+        ];
+        localStorage.setItem('products', JSON.stringify(initialProducts));
+    }
+
+    function getProducts() {
+        return JSON.parse(localStorage.getItem('products')) || [];
+    }
+
+    function saveProducts(products) {
+        localStorage.setItem('products', JSON.stringify(products));
+    }
+
+    //dùng để xóa localStorage
+    // localStorage.removeItem('products');
+
+    function refreshTable() {
+        const products = getProducts();
+        $('.tt-item').html(''); // Làm trống bảng
+
+        products.forEach((product, index) => {
+            // Lấy hình ảnh đầu tiên từ mảng productImage
+            const productImage = product.productImage.length > 0 ? product.productImage[0] : 'default.jpg';
+
+            $(".tt-item").append(`
+                <div class="gh-item d-flex justify-content-between align-items-center">
+                    <div class="p-item d-flex justify-content-between align-items-center">
+                        <div class="img px-2">
+                            <img src="./image/${productImage}" alt="">
+                        </div>
+                        <div class="p-info">
+                            <h4>${product.productName}</h4>
+                            <div class="p-act d-flex justify-content-start align-items-center">
+                                <button class="btn-down">-</button>
+                                <input type="number" value="0" data-price="${product.dataPrice}" class="qty_input" max="10" min="0">
+                                <button class="btn-up">+</button>
+                            </div>
+                            <p><b>Giá:</b><span class="price">${product.productPrice}</span>VNĐ</p>
+                            <p>
+                                <b>Thành tiền:</b>
+                                <span class="total_price">0</span>VNĐ
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="gh-action m-2 d-flex flex-column">
+                        <button class="delete-item">x</button>
+                        <button class="update-item">Cập nhật</button>
+                    </div>
+                </div>
+
+            `);
+        });
+    }
 
     //Cập nhập thành tiền
     function updateTotalPrice(input) {
@@ -11,7 +68,7 @@ $(document).ready(function() {
     }
 
     //button "-" số lượng
-    $(".btn-down").click(function() {
+    $(document).on('click','.btn-down',function(){
         var input = $(this).siblings(".qty_input"); // Lấy input liên quan đến nút bấm
         var currentValue = parseInt(input.val()); // Lấy giá trị hiện tại từ input
         var minValue = parseInt(input.attr("min")); // Lấy giá trị tối thiểu từ thuộc tính 'min'
@@ -23,7 +80,7 @@ $(document).ready(function() {
     });
 
     //button "+" số lượng
-    $(".btn-up").click(function() {
+    $(document).on('click','.btn-up',function(){
         var input = $(this).siblings(".qty_input"); // Lấy input liên quan đến nút bấm
         var currentValue = parseInt(input.val());
         var maxValue = parseInt(input.attr("max")); // Lấy giá trị tối đa từ thuộc tính 'max'
@@ -38,7 +95,9 @@ $(document).ready(function() {
         let totalAmount = 0;
         let hasAboveTenMillion = false; // Biến kiểm tra xem có sản phẩm nào trên 10 triệu
 
+        // Duyệt qua tất cả các ô thành tiền để tính tổng
         $('.total_price').each(function() {
+        // $('.total_price').each(function() {
             let itemTotal = parseInt($(this).text().replace(/,/g, '')) || 0; // Lấy thành tiền sản phẩm
             totalAmount += itemTotal; // Cộng dồn thành tiền
             if (itemTotal >= 10000000) { // Kiểm tra xem có sản phẩm nào trên 10 triệu
@@ -63,13 +122,13 @@ $(document).ready(function() {
     }
 
     // Xóa sản phẩm
-    $('.gh-item .gh-action button:first-child').click(function() {
+    $(document).on('click', '.delete-item', function() {
         $(this).closest('.gh-item').remove(); // Xóa sản phẩm
         updateFinalAmount(); // Cập nhật tổng số tiền sau khi xóa
     });
 
     // Cập nhật sản phẩm
-    $('.gh-item .gh-action button:last-child').click(function() {
+    $(document).on('click', '.update-item', function() {
         var input = $(this).closest('.gh-item').find('.qty_input'); // Lấy input của sản phẩm
         updateTotalPrice(input); // Cập nhật lại thành tiền cho sản phẩm
         
@@ -80,4 +139,6 @@ $(document).ready(function() {
             input.prop('disabled', true); // Ngăn không cho chỉnh sửa
         }
     });
+
+    refreshTable();
 });
