@@ -16,9 +16,6 @@ body,html{
 .action-btn{
     margin-right: 5px;
 }
-.md-3{
-    display: flex;
-}
 .search-bả, .sort-bar, .search-btn{
     margin-bottom: 1.2rem;
 }

@@ -11,12 +11,15 @@ $(document).ready(function(){
         ];
         localStorage.setItem('students',JSON.stringify(initialStudents));   
     }
+    
     function getStudents(){
         return JSON.parse(localStorage.getItem('students'))||[];
     }
+
     function saveStudents(students){
         localStorage.setItem('students', JSON.stringify(students));
     }
+
     function refreshTable(studentsToDisplay){
         const students =studentsToDisplay || getStudents();
         $('#studentTable').html('');
@@ -87,8 +90,13 @@ $(document).ready(function(){
 
         $('#formTitle').text("thông tin sinh viên");
     });
-    //sửa sinh viên
 
+    //ẩn nút lưu khi xem chi tiết sinh viên
+    $(document).on('click','.viewBtn',function(){
+        $('.save').hide();
+    });
+
+    //sửa sinh viên
     $(document).on('click','.editBtn',function(){
         editingIndex= $(this).data('index');
         const students = getStudents();
