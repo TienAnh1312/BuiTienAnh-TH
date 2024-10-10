@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+.bg-white{
+    height: 450px;
+}
+.box-item{
+    border: 1px solid #ccc;
+    box-shadow: 10px 10px 6px -1px rgba(0,0,0,0.34);
+}
+.img{
+    width: 8rem;
+}
+.img img{
+    width: 100%;
+}
+.gh-item button{
+    padding: 0 0.5rem;
+    border: 1px solid #cccc;
+}
+.gh-item input{
+    border: 0;
+    width: 35px;
+    border-top: 1px solid #cccc;
+    border-bottom: 1px solid #cccc;
+    text-align: center;
+}
+.gh-item input:focus{
+    outline: none;
+}
+.p-info span{
+    color: red;
+}
