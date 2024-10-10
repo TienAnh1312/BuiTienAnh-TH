@@ -58,6 +58,21 @@ $(document).ready(function() {
         });
     }
 
+    // Sự kiện cho ô input khi có sự thay đổi
+    $(document).on('input', '.qty_input', function() {
+        var input = $(this);
+        var value = parseInt(input.val());
+
+        // Kiểm tra giá trị hợp lệ
+        if (isNaN(value) || value < 0) {
+            input.val(0);
+        } else if (value > parseInt(input.attr("max"))) {
+            input.val(input.attr("max"));
+        }
+
+        updateTotalPrice(input); // Cập nhật thành tiền
+    });
+
     //Cập nhập thành tiền
     function updateTotalPrice(input) {
         var price = parseInt(input.attr('data-price')); // Lấy đơn giá từ data-price
